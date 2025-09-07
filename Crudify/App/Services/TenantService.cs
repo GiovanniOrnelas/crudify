@@ -1,14 +1,14 @@
-﻿using Crudify.Domain.Interfaces.Services;
-using Crudify.Dto;
-using Crudify.Infrastructure.Repository;
+﻿using Crudify.Domain.Interfaces.Repository;
+using Crudify.Domain.Interfaces.Services;
+using Crudify.Dto.Result;
 
-namespace Crudify.App.Services.Tenant
+namespace Crudify.App.Services
 {
     public class TenantService : ITenantService
     {
-        private readonly TenantRepository _tenantRepository;
+        private readonly ITenantRepository _tenantRepository;
 
-        public TenantService(TenantRepository tenantRepository)
+        public TenantService(ITenantRepository tenantRepository)
         {
             _tenantRepository = tenantRepository;
         }

@@ -1,5 +1,5 @@
 ﻿using Crudify.Domain.Interfaces.Services;
-using Crudify.Dto;
+using Crudify.Dto.Result;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Crudify.Controllers

@@ -1,8 +1,6 @@
 ﻿using Crudify.App.Services;
-using Crudify.App.Services.Authentication;
-using Crudify.App.Services.Tenant;
+using Crudify.Domain.Interfaces.Repository;
 using Crudify.Domain.Interfaces.Services;
-using Crudify.Domain.Interfaces.Services.Authentication;
 using Crudify.Infrastructure.EF;
 using Crudify.Infrastructure.Repository;
 using Microsoft.EntityFrameworkCore;
@@ -22,8 +20,9 @@ namespace Crudify.Infrastructure.AppConfigurations
             serviceCollection.AddScoped<ICreateTokenService, CreateTokenService>();
             serviceCollection.AddScoped<ITenantService, TenantService>();
             serviceCollection.AddScoped<IUserService, UserService>();
-            serviceCollection.AddScoped<TenantRepository>();
-            serviceCollection.AddScoped<UserRepository>();
+
+            serviceCollection.AddScoped<ITenantRepository, TenantRepository>();
+            serviceCollection.AddScoped<IUserRepository, UserRepository>();
             #endregion
 
             serviceCollection.AddDbContext<DataContext>(options => options

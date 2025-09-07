@@ -1,10 +1,9 @@
-﻿using Crudify.App.Services.Tenant;
-using Crudify.Domain.Interfaces.Services;
-using Crudify.Dto;
+﻿using Crudify.Domain.Interfaces.Services;
+using Crudify.Dto.Result;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Crudify.Controllers.Tenant
+namespace Crudify.Controllers
 {
     [Route("api/v1/tenant")]
     public class TenantController : BaseController

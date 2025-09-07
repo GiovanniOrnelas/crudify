@@ -1,14 +1,14 @@
-﻿using Crudify.Domain.Interfaces.Services;
-using Crudify.Dto;
-using Crudify.Infrastructure.Repository;
+﻿using Crudify.Domain.Interfaces.Repository;
+using Crudify.Domain.Interfaces.Services;
+using Crudify.Dto.Result;
 
 namespace Crudify.App.Services
 {
     public class UserService : IUserService
     {
-        private readonly UserRepository _userRepository;
+        private readonly IUserRepository _userRepository;
 
-        public UserService(UserRepository userRepository)
+        public UserService(IUserRepository userRepository)
         {
             _userRepository = userRepository;
         }

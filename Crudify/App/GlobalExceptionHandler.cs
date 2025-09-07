@@ -78,6 +78,10 @@ namespace Crudify.App
                     problemDetails.Detail = invalidOperationException.Message;
                     problemDetails.Status = (int)HttpStatusCode.BadRequest;
                     break;
+                case ApplicationException applicationException:
+                    problemDetails.Detail = applicationException.Message;
+                    problemDetails.Status = (int)HttpStatusCode.BadRequest;
+                    break;
                 case FluentValidation.ValidationException fluentValidationException:
                     problemDetails.Detail = string.Join(" | ", fluentValidationException.Errors.Select(x => x.ErrorMessage));
                     problemDetails.Status = (int)HttpStatusCode.BadRequest;

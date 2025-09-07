@@ -6,7 +6,7 @@ namespace Crudify.Domain.Entities
     {
         protected User() { }
 
-        public User(string name, string password, UserType userType, string email, string document, DateTime birthDate, Gender gender)
+        public User(string name, string password, UserType userType, string email, string document, DateTime birthDate, Gender gender, long tenantId)
         {
             Name = name;
             Password = password;
@@ -18,6 +18,7 @@ namespace Crudify.Domain.Entities
             Gender = gender;
             CreatedAt = DateTime.UtcNow;
             UpdatedAt = DateTime.UtcNow;
+            TenantId = tenantId;
         }
 
         public string Name { get; private set; }

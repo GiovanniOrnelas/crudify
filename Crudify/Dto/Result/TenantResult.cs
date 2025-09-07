@@ -1,6 +1,6 @@
 ﻿using Crudify.Domain.Entities;
 
-namespace Crudify.Dto
+namespace Crudify.Dto.Result
 {
     public class TenantResult
     {

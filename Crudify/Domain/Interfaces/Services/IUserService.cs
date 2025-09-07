@@ -1,4 +1,4 @@
-﻿using Crudify.Dto;
+﻿using Crudify.Dto.Result;
 
 namespace Crudify.Domain.Interfaces.Services
 {

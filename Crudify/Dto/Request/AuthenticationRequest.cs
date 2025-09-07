@@ -1,4 +1,4 @@
-﻿namespace Crudify.Dto.Authentication
+﻿namespace Crudify.Dto.Request
 {
     public class AuthenticationRequest
     {

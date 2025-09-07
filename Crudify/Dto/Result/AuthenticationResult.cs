@@ -3,16 +3,16 @@ using Crudify.Domain.Entities;
 using Crudify.Infrastructure.JWT;
 using System.ComponentModel.DataAnnotations;
 
-namespace Crudify.Dto.JWT
+namespace Crudify.Dto.Result
 {
-    public class AuthResponse
+    public class AuthenticationResult
     {
-        public AuthResponse()
+        public AuthenticationResult()
         {
 
         }
 
-        public AuthResponse(User user, long tenantId)
+        public AuthenticationResult(User user, long tenantId)
         {
             Id = user.Id;
             Email = user.Email;
@@ -20,9 +20,7 @@ namespace Crudify.Dto.JWT
             Token = JwtAuthentication.Create(user, tenantId);
             UserType = user.Type;
             TenantId = tenantId;
-            //Phone = user.Phones.Number;
         }
-
 
         public long Id { get; set; }
 

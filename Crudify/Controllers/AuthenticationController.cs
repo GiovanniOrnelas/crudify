@@ -1,10 +1,10 @@
-﻿using Crudify.Domain.Interfaces.Services.Authentication;
-using Crudify.Dto.Authentication;
-using Crudify.Dto.JWT;
+﻿using Crudify.Domain.Interfaces.Services;
+using Crudify.Dto.Request;
+using Crudify.Dto.Result;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Crudify.Controllers.Authentication
+namespace Crudify.Controllers
 {
     [Route("api/v1/authentication")]
     public class AuthenticationController : BaseController
@@ -17,7 +17,7 @@ namespace Crudify.Controllers.Authentication
 
         [HttpPost()]
         [AllowAnonymous]
-        public async Task<AuthResponse> CreateAsync([FromBody] AuthenticationRequest request, CancellationToken cancellationToken = default)
+        public async Task<AuthenticationResult> CreateAsync([FromBody] AuthenticationRequest request, CancellationToken cancellationToken = default)
         {
             return await _createTokenService.CreateAsync(request, cancellationToken);
         }

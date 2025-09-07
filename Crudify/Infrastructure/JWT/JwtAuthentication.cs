@@ -1,6 +1,6 @@
 ﻿using Crudify.Commons.Providers;
 using Crudify.Domain.Entities;
-using Crudify.Dto.JWT;
+using Crudify.Dto;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;

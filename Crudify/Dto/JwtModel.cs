@@ -1,4 +1,4 @@
-﻿namespace Crudify.Dto.JWT
+﻿namespace Crudify.Dto
 {
     public class JwtModel
     {

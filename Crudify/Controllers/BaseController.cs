@@ -19,7 +19,7 @@ namespace Crudify.Controllers
 
         internal long UserIdentity(long? id = null)
         {
-            if (User == null || User.Identity.Name == null || !long.TryParse(User.Identity.Name, out long userId) || (id.HasValue && id.Value != userId))
+            if (User == null || User.Identity.Name == null || !long.TryParse(User.Identity.Name, out long userId) || id.HasValue && id.Value != userId)
                 throw HttpErrorException.BadRequest("UserNotAllowed");
 
             return userId;
